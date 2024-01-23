@@ -17,7 +17,7 @@ npm install
 Después, puedes ejecutar los tests con:
 
 ```bash
-npm run jest excersise1
+npm run test excersise1
 ```
 
 Cada ejercicio tiene su propio archivo de test puedes ejecutarlos sustituyendo el numero después del excersise.
