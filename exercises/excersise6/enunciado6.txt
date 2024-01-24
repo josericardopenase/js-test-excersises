@@ -1,0 +1,9 @@
+Tenemos que crear una función listOfEven(numeros) que recoge como argumento un número y devuelve una lista de los numeros
+primos hasta ese momento.
+
+Ejemplos:
+
+2 -> [0, 2]
+5 -> [0, 2, 4]
+10 -> [0, 2, 4, 6, 8, 10]
+20 -> [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
