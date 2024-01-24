@@ -1,0 +1,14 @@
+Para una variable de tipo float (ejem: 22.04) devuelve el numero minimo de monedas
+teniendo en cuenta que solo puedes devolver estas monedas:
+
+10 euros
+2 euros
+1 euro
+50 cent
+10 cent
+2 cent
+1 cent
+
+
+ejemplo: para un costo de 23.04 el retorno sera {10euros: 2, 1euro: 3, 1cent: 4}
+ADVERTENCIA: VAS A DESCUBRIR QUE ES LA ARITMETICA DE COMA FLOTANDE
