@@ -1,9 +1,42 @@
-Tenemos que crear una función listOfEven(numeros) que recoge como argumento un número y devuelve una lista de los numeros
-pares hasta ese dado.
+Queremos programar el funcionamiento de los ataques básicos pasivos en el league of legends. 
+Esto es el modo de ataque basico donde atacas al target mas cercano aunque no cliques sobrel mismo. 
+Por ejemplo si hay un minion o un campeon dentro del rango de ataque automaticamente, aunque no hayas clicado sobre el,
+le atacas. Aunque esta opcion es desactibable en el menu alguien la ha tenido que programar jajaja.
 
-Ejemplos:
+Recordemos, el ataque basico pasivo se activa contra minions, monstruos y campeones dentro del rango.
 
-2 -> [0, 2]
-5 -> [0, 2, 4]
-10 -> [0, 2, 4, 6, 8, 10]
-20 -> [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+Estos funcionan de la siguiente forma:
+
+1. Mientras haya un enemigos dentro del rango
+    1.1 Buscar el enemigo con mayor cercania
+    1.2 atacar al enemigo con el arma
+
+Para la elaboración de esta tarea contamos con los siguientes recursos:
+
++ basicAttack(enemy, damage): recibe como argumento un enemigo y el daño que le vamos a hacer y lanza un ataque básico
++ enemiesInRange(radious): se le pasa como argumento un radio de ataque en valor numerico 
+                         y devuelve una lista con los enemigos del circulo de ese radio centrado en el jugador. 
+                         Dicha lista esta ordenada desde el enemigo mas cercano al menos cercano.
+    Ejemplo:
+        - enemiesInRange(10): ["caitlyn", "yasuo", "minionGordo"]
+        - enemiesInRange(5): ["yasuo"]
+    Como se puede observar al bajar el rango de 10 a 5 la caitlyn y el minion gordo que esta mas alejada ya no entraria en el circulo
+    sin embargo el yasuo sigue entrando por que esta a melee.
+
+    Ejemplo2: Este ejemplo nos ha puteado a todos
+        - enemiesInRange(10): ["minionGordo", "yasuo"]
+        - enemiesInRange(5):  ["minionGordo"]
+    
+    Como a pesar de existir un campeonm, yasuo, dentro del rango de ataque nuestro jugador 
+    atacara automaticamente al minionGordo pues este estara mas cerca.
+
+!IMPORTANTE! EN EL LOL SOLO SE ATACA AL JUGADOR MAS CERCANO, NO SE ATACA A TODOS.
+
+Nuestro código será implementado en la siguiente función
+
++ pasiveAttack(rangeOfChampion, damage):
+    - rangeOfChampion: es el rango de ataque de nuestro campeon es un valor numerico
+    -  damage: es un valor numerico que especifica el daño de basico de nuestro campeon
+
+
+
