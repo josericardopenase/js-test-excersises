@@ -1,20 +1,25 @@
-var firstTime = -1
-
-function attack(enemy, damage){
+function basicAttack(enemy, damage){
 }
 
 function getEnemiesInRange(range){
-    firstTime+=1
-    if(firstTime == 0)
-        return ["caitlyn", "yasuo", "minionGordo"]
-    if(firstTime == 1)
-        return ["yasuo", "minionGordo"]
-    if(firstTime == 2)
-        return ["yasuo", "minionGordo"]
-    return ["yasuo"]
 }
 
-function passiveAttack(rangeOfChampion, attack){
-}
 
-module.exports = passiveAttack;
+function passiveAttack(rangeOfChampion, damage) {
+    let enemies = getEnemiesInRange(rangeOfChampion);
+    
+    while (enemies.length > 0) {
+        console.log(enemies)
+        // Ataca al enemigo más cercano
+        basicAttack(enemies[0], damage);
+
+        // Actualiza la lista de enemigos después del ataque
+        enemies = getEnemiesInRange(rangeOfChampion);
+        console.log(enemies)
+    }
+}
+module.exports = {
+    passiveAttack,
+    getEnemiesInRange,
+    basicAttack
+};
