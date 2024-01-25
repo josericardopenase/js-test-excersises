@@ -1,0 +1,12 @@
+dadas dos listas devolver una nueva con el resultado de la suma entre ambas. 
+Ambas listas son de la misma longitud
+
+Ejemplo:
+
+[1, 2] + [1, 1] = [2, 3]
+[1, 2, 3] + [1, 1, 1] = [2, 3, 4]
+[2, 2, 3, 5] + [2, 1, 1, 5] = [4, 3, 4, 10]
+
+generalización:
+
+[x, y , z...] + [x1, y1, z1] = [x + x1, y + y1, z + z1]
